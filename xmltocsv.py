@@ -65,16 +65,10 @@ for idy, figa in enumerate(Figat):
         sys.exit(1)
     csv_rows.append(tags)
 
-"""
-for query in col_names:
-    qheader = root.findall(".//{*}"+query)
-    print(qheader)
-"""
-# print([x for x in header if x.find("./{*}FinInstrmGnlAttrbts")])
+
 
 with open("DLTNS_20210117_01of01.csv", "w") as resde:
     writer = csv.writer(resde)
     writer.writerow(csv_columns)
     writer.writerows(csv_rows)
 
-# dataframe = pd.read_csv('DLTNS_20210117_01of01.csv')
